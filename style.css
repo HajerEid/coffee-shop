@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Sour Gummy", serif;
+}
+/*header*/
+    /*top bar*/
+header .top{
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B3030;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    font-family: "Twinkle Star", cursive;;
+}
+header .top .logo {
+    display: flex;
+    align-items: center;
+}
+header .top .logo .title {
+    margin: 0 10px;
+    color: #FFF0D1;
+}
+header .top .bar ul{
+    display: flex;
+    padding-right: 30px;
+}
+header .top .bar ul li{
+    padding: 20px;
+}
+header .top .bar ul li a{
+    font-weight: bold;
+    color: #FFF0D1;
+}
+header .top .bar ul li a:hover {
+    color: #FFC26F;
+}
+    /*intro bar*/
+header #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url(https://i.pinimg.com/736x/4b/ac/3f/4bac3ff775a04936a761d29488802a4e.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*right*/
+header #hero .img {
+    width: 50%;
+   position: relative;
+   top:50px;
+   
+    transition: transform 1s ease-in-out;
+}
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+header #hero .img :hover{
+    animation: rotate360 3s linear;
+    transform: scale(1.1);  
+}
+
+header #hero .img img {
+    width: 90%;
+}
+/*left*/
+header #hero .caption {
+    position: relative;
+    left: 30px;
+    color: #FFF0D1;
+    max-width: 50%;
+    
+}
+header #hero .caption h2 {
+    font-size: 60px;
+    font-weight: 300;
+    color: #FFF0D1;
+    font-family: "Twinkle Star", cursive;
+        
+}
+header #hero .caption h2:hover {
+    font-weight: bolder;
+    color: #795757;
+    text-shadow: 2px 2px 2px #FFF0D1;
+}
+header #hero .caption p {
+    color: #D8D2C2;
+    
+}
+header #hero .caption button {
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #F8EDE3;
+    background-color: #795757;
+}
+
+header #hero .caption button:hover {
+    background-color: #664343;
+}
+
+/*main*/
+body {
+    background-image: linear-gradient(to bottom right,#664343 0%,
+        #795757 20%,
+        #FFF0D1 100%);  
+}
+#products , #offer  , #joinus , #AboutUs{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 30px;
+    
+}
+/*products*/
+main #products{
+ 
+height: 100vh;
+}
+main #products h2 {
+    font-family: "Twinkle Star", cursive;
+    color: #3B3030;
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #FFF0D1;
+    position: relative;
+}
+main #products h2::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    top: 50%;
+    right: 0;
+    box-shadow: 2px 2px 2px #FFF0D1;
+}
+main #products h2::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    box-shadow: 2px 2px 2px #FFF0D1;
+}
+main #products .product {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+main .product .card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    
+}
+
+main .product .card:hover {
+    transform: scale(1.05);
+}
+
+main .product .card .content {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main .product .card .content .pic {
+    width: 100%;
+    height: auto;
+     box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+main .product .card:hover .pic  {
+       opacity: 0.3;
+}
+
+main .product .content .text {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: bottom 0.3s ease-in-out;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+main .product .content .text h3{
+    color: #FFC26F;
+    font-family: "Twinkle Star", cursive;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+main .product .card:hover .text {
+    bottom: 0;
+    
+}
+
+main .product .card button {
+    position: relative;
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #664343;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+main .product .card button:hover {
+    background-color: #FFF0D1;
+    color: #000;
+}
+/*offer*/
+main #offer .item{
+justify-content: center;
+    margin-bottom: 40px;
+    display: flex;
+    margin: 20px;
+   align-items: center;
+   position: relative;
+}
+main #offer .item img{
+    width: 30%;
+    margin: 20px;
+}
+main #offer .item p{
+    text-align: center;
+    font-size: x-large;
+    position: relative;
+}
+main #offer .item p::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    bottom: -20%;
+    right: 20%;
+    box-shadow: 2px 2px 2px 2px #664343;
+}
+
+main #offer .item .icon{
+    text-align: center;
+}
+main #offer .item .material-icons{
+    font-size: 36px;
+    margin: 50px 20px;
+    color: #D24545;
+}
+main #offer .item .icon :hover{
+    color: #CD1818;
+    transform: scale(2);
+}
+/*join us*/
+
+main #joinus h2{
+    font-family: "Twinkle Star", cursive;
+    color: #3B3030;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px #FFF0D1;
+    margin-bottom: 10px;
+}
+main #joinus p{
+    margin-bottom: 30px;
+}
+main #joinus .enter{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 5px dashed #D6C0B3;
+        padding: 10px;
+        width: 300px;
+        margin: 0 auto;
+}
+main #joinus .enter .input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+main #joinus .input:focus {
+    transform: scale(1.02);
+    background-color: #FFF2E1;
+    padding: 10px 0;
+}
+main #joinus .input:hover::placeholder {
+    color: #FFD93D;
+    font-size: 20px;
+}
+main #joinus .enter button {
+     background-color: #664343;
+     color: #ffffff;
+     border: none;
+     padding: 10px 15px;
+     cursor: pointer;
+     font-size: 14px;
+ }
+ main #joinus .enter button:hover {
+     background-color: #FFF0D1;
+     color: #000;
+ }
+/*about us*/
+main #AboutUs{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+main #AboutUs h2 {
+    color: #664343;
+    text-shadow: 2px 2px 2px #FFF0D1;
+    padding: 20px 0;
+    position: relative;
+}
+
+main #AboutUs p{
+padding: 20px 0;
+}
+main #AboutUs .info {
+    text-align: left;
+    width: 30%;
+}
+main #AboutUs .info .social-media{
+    margin-top: 50px;
+}
+main #AboutUs .info h2::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    bottom: 5%;
+    left: 0;
+    box-shadow: 2px 2px 2px 2px #664343;
+}
+main #AboutUs .info .social-media img {
+    width: 40px;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+main #AboutUs .info .social-media img:hover{
+    transform: scale(1.2);
+}
+main #AboutUs  .location {
+    border-right: 2px dotted #3B3030;
+    border-left: 2px dotted #3B3030;
+    width: 33%;
+}
+main #AboutUs h2::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    bottom: 5%;
+    left: 20%;
+    box-shadow: 2px 2px 2px 2px #664343;
+}
+main #AboutUs .schedule{
+    width: 30%;
+}
+/*fooder*/
+footer{
+    display: flex;
+    color: #FFF0D1;
+    background-color: #3B3030;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px ;
+    
+}
