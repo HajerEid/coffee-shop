@@ -401,3 +401,161 @@ footer{
     padding: 5px 20px ;
     
 }
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    /*header*/
+    header .top {
+        position: static;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .top .logo {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    header .top .logo img {
+        width: 30px;
+    }
+
+    header .top .bar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 5px 0;
+        border-top: 1px solid #ccc;
+    }
+
+    header .top .bar ul li {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /*hero*/
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    header #hero .caption {
+        position: static;
+        padding: 10px;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    header #hero .caption h2 {
+        font-size: 2.5rem;
+    }
+    .caption button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        border-radius: 20px;
+    }
+
+    header #hero .img {
+        position: static;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /*main*/
+    /*products*/
+    #products,
+    #offer,
+    #joinus,
+    #AboutUs {
+        padding: 10px;
+        margin: 10px;
+
+    }
+    main #products {
+        height: fit-content;
+    }
+    main #products h2 {
+        font-size: 30px;
+    }
+    main #products h2::after ,
+    main #products h2::before{
+        width: 20%;
+    }
+    main #products .product {
+        flex-direction: column;
+        
+    }
+    main .product .card {
+       margin: 30px 0;   
+    }
+    main .product .card:last-child{
+        margin-bottom: 100px;
+    }
+    /*offer*/
+    main #offer .item {
+        flex-direction: column;
+    }
+    main #offer .item.r{
+        flex-direction: column-reverse;
+    }
+    main #offer .item img {
+        width: 100%;
+    }
+    main #offer .item p {
+        font-size: 18px;
+    }
+    main #offer .item p::after {
+        bottom: -15px;
+    }
+    main #offer .item .material-icons {
+        font-size: 30px;
+    }
+    /*join us*/
+
+    main #joinus .enter{
+       width: 80%;
+    }
+    /*about us*/
+    main #AboutUs {
+        flex-direction: column;
+    }
+
+    main #AboutUs .info ,
+    main #AboutUs .location,
+    main #AboutUs .schedule{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    main #AboutUs .info{
+        text-align: center;
+
+    }
+    main #AboutUs .info p {
+        width: 100%;
+        margin: auto;
+    }
+    main #AboutUs .info h2::after{
+        left: 20%;
+    }
+    main #AboutUs .info .social-media {
+        margin-top: 0;
+    }
+
+   main #AboutUs .location {
+    border-top: 2px dotted #3B3030;
+    border-bottom: 2px dotted #3B3030;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 20px;
+   }
+    /*fooder*/
+    footer img{
+       width: 30px;
+    }
+   
+
+
+}
